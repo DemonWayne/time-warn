@@ -6,7 +6,6 @@ const { days } = require('./config');
 exports.check = async (client, day, time) => {
   const lessons = days[day];
   if (!lessons) return;
-  console.log(time);
   const lesson = lessons[time];
   if (!lesson) return;
   const { name, url, cabinet } = lesson;
