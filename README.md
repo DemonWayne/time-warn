@@ -1,7 +1,7 @@
 <p align="center">
   <img alt="poster" src="https://github.com/DemonWayne/time-warn/blob/lite/assets/poster.png" >
 </p>
-<h1 align="center">Time Warn ⏲</h1>
+<h1 align="center">Time Warn Lite ⏳</h1>
 
 ## Где указать токен?
 В корне есть файл [.env.example](https://github.com/DemonWayne/time-warn/blob/lite/.env.example)
