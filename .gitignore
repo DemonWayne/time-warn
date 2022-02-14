@@ -80,7 +80,7 @@ web_modules/
 .env.local
 
 # configs dev
-.eslintrc.js
+.eslintrc.json
 .prettierrc
 
 # parcel-bundler cache (https://parceljs.org/)
