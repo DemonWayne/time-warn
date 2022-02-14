@@ -6,7 +6,7 @@
 ## Где указать токен?
 В корне есть файл [.env.example](https://github.com/DemonWayne/time-warn/blob/lite/.env.example)
 
-Дублируете его, убираете .example и в поле DISCORD_TOKEN после знака равно вставляете токен свеого бота
+Дублируете его, убираете .example и в поле DISCORD_TOKEN после знака равно вставляете токен своего бота
 
 Создать бота можно [здесь](https://discord.com/developers/applications)
 
