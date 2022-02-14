@@ -11,10 +11,10 @@ exports.ReadyListener = class ReadyListener extends Listener {
     new Logger().info(`[BOT] Запущен. Авторизован как ${username} [${id}]`);
     new Logger().info(`[Ready] Дата и время: ${DateTime.local().setLocale('RU').toFormat('yyyyг. dd LLL | TT')}`);
     console.log(`Ссылка приглашения - ${client.generateInvite({ scopes: ['bot'], permissions: ['216064'] })}`);
-    const time = DateTime.local().toFormat('H:mm');
-    const day = DateTime.local().toLocaleString({ weekday: 'long' });
     setInterval(() => {
+      const time = DateTime.local().toFormat('H:mm');
+      const day = DateTime.local().toLocaleString({ weekday: 'long' });
       check(client, day, time);
-    }, 40 * 1000);
+    }, 20 * 1000);
   }
 };
