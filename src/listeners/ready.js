@@ -1,19 +1,20 @@
 'use strict';
 
 const { Listener } = require('@sapphire/framework');
-const { Logger } = require('@sapphire/plugin-logger');
 const { DateTime } = require('luxon');
 const { check } = require('../utils');
 
-exports.ReadyListener = class ReadyListener extends Listener {
+exports.ReadyListener = class extends Listener {
   run(client) {
     const { username, id } = client.user;
-    new Logger().info(`[BOT] Запущен. Авторизован как ${username} [${id}]`);
-    new Logger().info(`[Ready] Дата и время: ${DateTime.local().setLocale('RU').toFormat('yyyyг. dd LLL | TT')}`);
+    this.container.logger.info(
+      `[BOT] Запущен. Авторизован как ${username} [${id}]\n` +
+        `[Ready] Дата: ${DateTime.local().setLocale('RU').toFormat('yyyyг. dd LLL')}`,
+    );
     console.log(`Ссылка приглашения - ${client.generateInvite({ scopes: ['bot'], permissions: ['216064'] })}`);
     setInterval(() => {
-      const time = DateTime.local().toFormat('H:mm');
       const day = DateTime.local().toLocaleString({ weekday: 'long' });
+      let time = DateTime.local().toFormat('H:mm');
       check(client, day, time);
     }, 20 * 1000);
   }

@@ -1,6 +1,7 @@
 'use strict';
 
 const { SapphireClient } = require('@sapphire/framework');
+require('@sapphire/plugin-logger/register');
 require('dotenv').config();
 
 const client = new SapphireClient({
