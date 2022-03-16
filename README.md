@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="poster" src="https://github.com/DemonWayne/time-warn/blob/master/assets/poster.png" >
+  <img alt="poster" src="https://github.com/DemonWayne/time-warn/blob/main/assets/poster.png" >
 </p>
 <h1 align="center">Time Warn ⏲</h1>
 
